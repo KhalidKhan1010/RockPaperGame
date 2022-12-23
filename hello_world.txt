@@ -1,0 +1,2 @@
+This is a game.
+It is played bewtween a (one) player and the computer.
