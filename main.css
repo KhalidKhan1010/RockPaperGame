@@ -1,0 +1,102 @@
+#button-backgroundMusic {
+    align-self: center;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(to right, rgba(112, 40, 228, 0.9), rgba(229, 178, 202, 0.9)), url(images/logo2.png) center/contain no-repeat, black;
+    background-attachment: fixed;
+}
+
+.playAgain-popUp-box-container {
+    display: none; /*Will change to flex via JS when a match ends*/ 
+    justify-content: center;
+}
+
+.flexible-image {
+    width: 100%;
+}
+
+.index-heading-one-container {
+    display: flex;
+    justify-content: center;
+}
+
+.index-heading-one {
+    
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.game-window-container {
+    display: flex;
+    justify-content: center;
+}
+
+.game-window {
+    display: flex;
+    flex-direction: column;
+    width: 720px;
+    height: 520px;
+    row-gap: 20px;
+}
+
+.game-window-scores {
+    flex: 1 0 50px; /* We want the "basis" height of the game window scores div to be 50px (out of the total height of 520px of the parent) */
+    margin-bottom: -20px; /* To cancel out the 20px row-gap of the game window flex container*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: white; 
+}
+
+.game-window-animations {
+    display: flex;
+    /* align-items: center; */
+    border: black 2px solid;
+    flex: 1 0 365px; /* We want the "basis" height of the game window animation div to be 365px (out of the total height of 520px of the parent) */
+    /* The game window animations div inherits a width of 720px (100% width) from its parent div game window */
+    /* Hence, width: 720px */ 
+}
+
+.game-window-player {
+    border-right: black 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 360px; /* 360px is half of 720px (720px is the width of the parent element, game window animations div). We want the game window player div to occupy 50% of the width of its parent. */
+    padding: 20px;
+}
+
+.game-window-computer {
+    border-left: black 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 360px; /* 360px is half of 720px (720px is the width of the parent element, game window animations div). We want the game window computer div to occupy 50% of the width of its parent. */
+    padding: 20px; 
+}
+
+.game-window-controls {
+    align-self: center; /* Game Window Controls div is both a flex item (of Game Window div) and a flex-container. This CSS property controls its alignment as a flex-item */
+    display: flex; /* The CSS property responsible for making the Game Window Controls div (a flex-item of Game Window div) a flex-container (in addition to being a flex-item). */
+    column-gap: 35px;
+    flex: 1 0 105px; /* We want the "basis" height of the game window controls div to be 105px (out of the total height of 520px of the parent) */
+}
+
+.game-buttons {
+    width: 50px;
+    height: 50px;
+}
+
+.game-window-player-image {
+    width: 100%;
+}
+
+.game-window-computer-image {
+    width: 100%; 
+}
+

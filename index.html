@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Script-Type" content="type">
+        <title>Rock Paper Scissors</title>
+        <link href="main.css" rel="stylesheet">
+        <script src="script1.js" defer></script> 
+    </head>
+    <body>
+        <header>
+            <nav class="primary-nav">           
+            </nav>
+        </header>
+        <main>
+            <audio id="backgroundMusic" src="sounds/background.mp3"></audio>
+            <audio id="audio-round" src=""></audio>
+            <div class="index-heading-one-container">
+                <h1 class="index-heading-one">Rock Paper Scissors</h1>
+            </div>
+            <div id="playAgain-popUp-box-container" class="playAgain-popUp-box-container">
+                <div class="playAgain-popUp-box">
+                    <div id="matchWinner-notification">Match in Progress ... </div>
+                    <button id="button-playAgain">Play Again</button>
+                </div>
+            </div>
+            <div class="game-window-container">
+                <button id="button-backgroundMusic">Music</button>
+                <div class="game-window">
+                    <div class="game-window-scores capitalize">
+                        <div id="score-player" class="score-player">
+                            player: 0
+                        </div>
+                        <div id="match-winner">
+                            winner: <span id="match-winner-value" ></span>
+                        </div>
+                        <div id="score-computer" class="score-computer">
+                            computer: 0
+                        </div>
+                    </div>
+                    <div class="game-window-animations">
+                        <div class="game-window-player">
+                            <div class="game-window-player-image-container">
+                                <img id="game-window-player-image" class="flexible-image" src="images/rock2.png"/>
+                            </div>
+                        </div>
+                        <div class="game-window-computer">
+                            <div class="game-window-computer-image-container">
+                                <img id="game-window-computer-image" class="flexible-image" src="images/rock2.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="game-window-controls" class="game-window-controls">
+                        <div>
+                            <button id="button-rock" class="game-buttons">
+                                <img src="images/rock.png" class="flexible-image"/>
+                            </button>
+                        </div>
+                        <div>
+                            <button id="button-scissors" class="game-buttons">
+                                <img src="images/scissors.png" class="flexible-image"/>
+                            </button>
+                        </div>
+                        <div>
+                            <button id="button-paper" class="game-buttons">
+                                <img src="images/paper.png" class="flexible-image"/>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/tomas-knop" title="Tomas Knop">Tomas Knop</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div><div>Icons made by <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <a href="https://www.flaticon.com/free-icons/rock-paper-scissors" title="rock-paper-scissors icons">Rock-paper-scissors icons created by Freepik - Flaticon</a>
+        </footer>   
+    </body>
+</html>
