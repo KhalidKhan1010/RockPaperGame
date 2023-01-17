@@ -167,9 +167,9 @@ function getNewScore(roundWinner, Score){
 }
 
 function getMatchWinner(Score){
-    if (Score.scorePlayer === 3)
+    if (Score.scorePlayer === 5)
         return "player";
-    else if (Score.scoreComputer === 3)
+    else if (Score.scoreComputer === 5)
         return "computer";
     else
         return "toBeDecided";
