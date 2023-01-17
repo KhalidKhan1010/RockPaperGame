@@ -17,18 +17,43 @@ document.getElementById("button-backgroundMusic").addEventListener('click', func
 
 let buttonRock = document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){
+    document.removeEventListener('keydown', keyDownEventHandler);
     buttonClickEventHandler(Choice.ROCK);
 });
 
 let buttonPaper = document.getElementById('button-paper');
 buttonPaper.addEventListener('click', function(){
+    document.removeEventListener('keydown', keyDownEventHandler);
     buttonClickEventHandler(Choice.PAPER)
 });
 
 let buttonScissors = document.getElementById('button-scissors');
 buttonScissors.addEventListener('click', function(){
+    document.removeEventListener('keydown', keyDownEventHandler);
     buttonClickEventHandler(Choice.SCISSORS)
 });
+
+document.addEventListener('keydown', keyDownEventHandler);
+
+function keyDownEventHandler(e)
+{
+    switch (e.key)
+    {
+        case 'ArrowLeft':
+        case 'Left':
+            buttonRock.click();
+            break;
+        case 'ArrowDown':
+        case 'Down':
+            buttonScissors.click();
+            break;
+        case 'ArrowRight':
+        case 'Right':
+            buttonPaper.click();
+            break;
+        default:  
+    } 
+}
 
 document.getElementById("button-playAgain").addEventListener('click', function(){
         Score.scorePlayer = 0;
@@ -44,6 +69,7 @@ document.getElementById("button-playAgain").addEventListener('click', function()
         computerWindowImage.setAttribute('src', 'images/rock2.png');
 
         document.getElementById("game-window-controls").style.visibility = "visible";
+        document.addEventListener('keydown', keyDownEventHandler);
         document.getElementById("playAgain-popUp-box-container").style.display = "none";
 });
 
@@ -70,13 +96,14 @@ function buttonClickEventHandler(playersChoice)
         displayScore();
         document.getElementById("game-window-controls").style.visibility = "visible";
         matchWinner = getMatchWinner(Score);
+        document.addEventListener('keydown', keyDownEventHandler);
 
         if (matchWinner !== "toBeDecided")
         {
             displayMatchWinner();
             endMatch();
         }
-        
+
     }, 3000);
 }
 
@@ -208,6 +235,7 @@ function endMatch(){
         document.getElementById("matchWinner-notification").innerText = "You Lost ..."
 
     document.getElementById("game-window-controls").style.visibility = "hidden";
+    document.removeEventListener('keydown', keyDownEventHandler);
     document.getElementById("playAgain-popUp-box-container").style.display = "flex";
 }
 
